@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<div class="container">
+    <div class="p-4 m-4">
+        <div class="col-lg-5 mx-auto border rounded pt-4">
+            <h3 class="alert alert-light border rounded">Create An Account</h3>
+            <form action="/signup/" method="POST">
+                {% csrf_token %}
+
+
+               <!--Firstname-->
+            <div class="form-group">
+              <label for="">First Name</label>
+              <input required type="text" name="firstname" id="" class="form-control" placeholder="">           
+            </div>
+
+               <!--Lastname-->
+            <div class="form-group">
+              <label for="">Last Name</label>
+              <input required type="text" name="lastname" id="" class="form-control">           
+            </div>
+
+               <!--Contact-->
+            <div class="form-group">
+              <label for="">Mobile-No</label>
+              <input required type="text" name="phone" id="" class="form-control" placeholder="">           
+            </div>
+
+
+                <!--email-->
+            <div class="form-group">
+              <label for="">Email</label>
+              <input required type="Email" name="Email" id="" class="form-control" placeholder="manishrwt786@gmail.com">           
+            </div>
+
+               <!--password-->
+            <div class="form-group">
+              <label for="">Password</label>
+              <input required type="Password" name="password" id="" class="form-control" placeholder="*********">           
+            </div>
+
+            <div class="form-group">
+                <input required class="btnbtn-sm btn-info" type="submit" value="Create an Account">
+            </div>
+
+             
+
+            
+            
+            </form>
+
+
+</div>
+
+
+{% endblock %}
